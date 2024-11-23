@@ -2,7 +2,7 @@ package Presenter;
 
 import Model.Note;
 import Model.Notebook;
-import View.NotebookView;
+import View.View;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -11,11 +11,11 @@ import java.util.List;
 public class NotebookPresenter {
 
     private final Notebook model;
-    private final NotebookView view;
+    private final View view;
 
-    public NotebookPresenter(Notebook model, NotebookView view) {
-        this.model = model;
-        this.view = view;
+    public NotebookPresenter( View ConsoleUi) {
+        model = new Notebook();
+        view = ConsoleUi;
     }
 
     public void addNote(){

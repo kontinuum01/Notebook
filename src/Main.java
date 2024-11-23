@@ -1,12 +1,10 @@
-import Model.Notebook;
-import Presenter.NotebookPresenter;
+import View.ConsoleUi;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Notebook model = new Notebook();
-        NotebookPresenter presenter = new NotebookPresenter(model, view);
-        ConsoleUi consoleUi = new ConsoleUi(scanner, presenter, menu);
+        ConsoleUi consoleUi = new ConsoleUi();
         consoleUi.start();
     }
 }
